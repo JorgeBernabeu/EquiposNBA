@@ -9,81 +9,114 @@
         Height="446.552"
         Width="810"
         Icon="assets/128.ico">
+    <Window.Resources>
+
+        <Style TargetType="{x:Type Border}">
+
+            <Setter Property="BorderBrush"
+                    Value="Black" />
+
+            <Setter Property="BorderThickness"
+                    Value="3" />
+
+            <Setter Property="CornerRadius"
+                    Value="3" />
+
+        </Style>
+
+        <Style TargetType="{x:Type WrapPanel}">
+
+            <Setter Property="HorizontalAlignment"
+                    Value="Center" />
+
+        </Style>
+
+        <Style TargetType="{x:Type TextBlock}">
+
+            <Setter Property="TextWrapping"
+                    Value="Wrap" />
+            <Setter Property="TextAlignment"
+                    Value="Center" />
+            <Setter Property="FontWeight"
+                    Value="Bold" />
+            <Setter Property="FontSize"
+                    Value="30" />
+
+        </Style>
+
+        <Style TargetType="{x:Type Image}">
+
+            <Setter Property="Width"
+                    Value="150" />
+
+        </Style>
+
+        <Style TargetType="{x:Type StackPanel}"
+               x:Key="Degradado1">
+
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1"
+                                         StartPoint="0.5,0">
+
+                        <GradientStop Color="#FF852AE0"
+                                      Offset="0" />
+                        <GradientStop Color="#FFDCD310"
+                                      Offset="1" />
+
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="{x:Type StackPanel}"
+               x:Key="Degradado2">
+
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1"
+                                         StartPoint="0.5,0">
+
+                        <GradientStop Color="Black"
+                                      Offset="0.152" />
+                        <GradientStop Color="#FF8B0A0A"
+                                      Offset="1" />
+
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+    </Window.Resources>
     <Grid>
+
         <StackPanel Margin="10">
-            <Border BorderBrush="Black"
-                    BorderThickness="3"
-                    CornerRadius="3"
-                    Margin="0,0,0,10">
-                <StackPanel VerticalAlignment="Top">
-                    <StackPanel.Background>
-                        <LinearGradientBrush EndPoint="0.5,1"
-                                             StartPoint="0.5,0">
-                            <GradientStop Color="#FF852AE0"
-                                          Offset="0" />
-                            <GradientStop Color="#FFDCD310"
-                                          Offset="1" />
-                        </LinearGradientBrush>
-                    </StackPanel.Background>
-                    <TextBlock TextWrapping="Wrap"
-                               Text="Los Ángeles Lakers"
-                               TextAlignment="Center"
-                               FontWeight="Bold"
-                               FontSize="30" />
+
+            <Border Margin="0,0,0,10">
+                <StackPanel Style="{StaticResource Degradado1}">
+
+                    <TextBlock Text="Los Ángeles Lakers" />
                     <WrapPanel>
-                        <Image
-                               Width="150"
-                               Source="14_lakers.png" />
-                        <Image
-                               Width="150"
-                               Source="23_lakers.png" />
-                        <Image
-                               Width="150"
-                               Source="39_lakers.png" />
-                        <Image
-                               Width="150"
-                               Source="3_lakers.png" />
-                        <Image
-                               Width="150"
-                               Source="9_lakers.png" />
+                        <Image Source="14_lakers.png" />
+                        <Image Source="23_lakers.png" />
+                        <Image Source="39_lakers.png" />
+                        <Image Source="3_lakers.png" />
+                        <Image Source="9_lakers.png" />
                     </WrapPanel>
                 </StackPanel>
             </Border>
-            <Border BorderBrush="Black"
-                    BorderThickness="3"
-                    CornerRadius="3">
-                <StackPanel>
-                    <StackPanel.Background>
-                        <LinearGradientBrush EndPoint="0.5,1"
-                                             StartPoint="0.5,0">
-                            <GradientStop Color="Black"
-                                          Offset="0.152" />
-                            <GradientStop Color="#FF8B0A0A"
-                                          Offset="1" />
-                        </LinearGradientBrush>
-                    </StackPanel.Background>
-                    <TextBlock TextWrapping="Wrap"
-                               Text="Miami Heat"
-                               TextAlignment="Center"
-                               FontWeight="Bold"
-                               FontSize="30"
+
+            <Border>
+                <StackPanel Style="{StaticResource Degradado2}">
+                    <TextBlock Text="Miami Heat"
                                Foreground="White" />
-                    <WrapPanel HorizontalAlignment="Center">
-                        <Image
-                               Width="150"
-                               Source="7_heat.png" />
-                        <Image
-                               Width="150"
-                               Source="13_heat.png" />
-                        <Image
-                               Width="150"
-                               Source="14_heat.png" />
-                        <Image
-                               Width="150"
-                               Source="22_heat.png" />
-                        <Image
-                               Width="150"
-                               Source="99_heat.png" />
+                    <WrapPanel>
+                        <Image Source="7_heat.png" />
+                        <Image Source="13_heat.png" />
+                        <Image Source="14_heat.png" />
+                        <Image Source="22_heat.png" />
+                        <Image Source="99_heat.png" />
                     </WrapPanel>
                 </StackPanel>
             </Border>
